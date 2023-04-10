@@ -5,7 +5,7 @@ import './globals.css'
 import {Nunito} from 'next/font/google'
 
 export const metadata = {
-  title: 'Airbnb',
+  title: 'Hommie',
   description: '',
 }
 

@@ -13,6 +13,10 @@ import {
 
 import useRegisterModal from '../hooks/useRegisterModal';
 import Modal from './Modal';
+import Heading from '../Heading';
+import Input from '../inputs/Input';
+
+
 
 
 
@@ -26,7 +30,6 @@ const RegisterModal = () => {
     handleSubmit,
     formState:{
       errors,
-
     }
   } =useForm<FieldValues>({
     defaultValues : {
@@ -50,6 +53,24 @@ const RegisterModal = () => {
       setIsLoading(false);
     });
   }
+
+
+  const bodyContent = (
+    <div className='flex flex-col gap-4'>
+      <Heading 
+      title={'Welcome to Hommie '}
+      subtitle={'Create an Account'} />
+      <Input
+        id='email'
+        label='Email'
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+
+      />
+    </div>
+  )
   
   return (
     <div>
@@ -60,6 +81,7 @@ const RegisterModal = () => {
       actionLabel='Continue'
       onClose={registerModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
+      body={bodyContent}
       />
     </div>
   )
