@@ -17,8 +17,8 @@ import Modal from "./Modal";
 import Input from "../inputs/Input";
 import Heading from "../Heading";
 import Button from "../Button";
-import useRegisterModal from "../hooks/useRegisterModal";
-import useLoginModal from "../hooks/useLoginModal";
+import useRegisterModal from "../../hooks/useRegisterModal";
+import useLoginModal from "../../hooks/useLoginModal";
 import { useRouter } from 'next/navigation';
 
 const LoginModal= () => {
@@ -62,6 +62,8 @@ const LoginModal= () => {
     })
    
   }
+
+ 
 
 
   const bodyContent = (
@@ -113,14 +115,16 @@ const LoginModal= () => {
           font-light
         "
       >
-        <p>Already have an account?
-          <span onClick={registerModal.onClose}
+        <p>Don't Have a account?
+          <span onClick={
+            loginModal.onClose
+          }
             className="
               text-neutral-800
               cursor-pointer 
               hover:underline
             "
-            > Log in</span>
+            > Create a account</span>
         </p>
       </div>
     </div>
