@@ -115,7 +115,7 @@ const LoginModal= () => {
           font-light
         "
       >
-        <p>Don't Have a account?
+        <p>Dont Have a account?
           <span onClick={
             loginModal.onClose
           }
