@@ -18,6 +18,7 @@ import Heading from "../Heading";
 import Button from "../Button";
 import useRegisterModal from "../../hooks/useRegisterModal";
 import { signIn } from "next-auth/react";
+import { sign } from "crypto";
 
 const RegisterModal= () => {
   const registerModal = useRegisterModal();
@@ -95,7 +96,7 @@ const RegisterModal= () => {
         outline 
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}} 
+        onClick={() => signIn('google')} 
       />
       <Button 
         outline 

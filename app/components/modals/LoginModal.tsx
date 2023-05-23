@@ -63,9 +63,6 @@ const LoginModal= () => {
    
   }
 
- 
-
-
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
@@ -99,13 +96,13 @@ const LoginModal= () => {
         outline 
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}} 
+        onClick={() => signIn('google')} 
       />
       <Button 
         outline 
         label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => {}}
+        onClick={() => signIn('github')}
       />
       <div 
         className="
