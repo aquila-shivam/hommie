@@ -63,6 +63,11 @@ const LoginModal= () => {
    
   }
 
+  const toggle = useCallback(()=>{
+    loginModal.onClose();
+    registerModal.onOpen();
+  },[loginModal,registerModal]);
+
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
@@ -114,7 +119,7 @@ const LoginModal= () => {
       >
         <p>Dont Have a account?
           <span onClick={
-            loginModal.onClose
+            toggle
           }
             className="
               text-neutral-800

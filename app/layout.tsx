@@ -6,6 +6,7 @@ import Navbar from './components/navbar/Navbar';
 import ToasterProvider from './providers/ToasterProvider';
 import './globals.css'
 import {Nunito} from 'next/font/google'
+import RentModal from './components/modals/RentModal';
 
 export const metadata = {
   title: 'Hommie',
@@ -30,6 +31,7 @@ export default async function RootLayout({
       <body className={font.className}>
         <ClientOnly>
         <ToasterProvider/>
+        <RentModal/>
         <LoginModal/>
         <RegisterModal/>
         <Navbar currentUser = {currentUser}/>
