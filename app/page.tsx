@@ -8,6 +8,9 @@ import getListings, {
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
 
+
+export const dynamic = 'auto';
+
 interface HomeProps {
   searchParams: IListingsParams
 };
