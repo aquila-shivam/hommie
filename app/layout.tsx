@@ -9,6 +9,8 @@ import {Nunito} from 'next/font/google'
 import RentModal from './components/modals/RentModal';
 import SearchModal from './components/modals/SearchModal';
 
+export const dynamic = 'auto';
+
 export const metadata = {
   title: 'Hommie',
   description: '',
